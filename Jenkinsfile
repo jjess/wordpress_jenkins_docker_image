@@ -22,6 +22,13 @@ pipeline{
 			}
 		}
 
+                stage('Tag') {
+
+                        steps {
+                                sh 'docker tag jjess/wordpress_develop:latest  jjjesss/wordpress_develop:latest'
+                        }
+                }
+
 		stage('Push') {
 
 			steps {
